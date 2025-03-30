@@ -1,0 +1,3 @@
+https://docs.github.com/ru
+https://postgrespro.ru/docs/postgresql/17/
+https://pydocs.ru/ - не официальная (официальной на русском нету)
