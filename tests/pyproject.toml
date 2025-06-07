@@ -1,0 +1,19 @@
+[project]
+name = "tests"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "pydash>=8.0.5"
+]
+
+[dependency-groups]
+dev = [
+    "pytest>=8.3.5",
+    "pytest-cov>=6.1.1"
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

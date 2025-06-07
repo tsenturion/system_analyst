@@ -1,0 +1,27 @@
+app/
+    -analyzer.py
+tests/
+    -test_analyzer.py
+    -conftest.py
+
+разобраться в текущем проекте
+понять какие фикстуры с какими scopes работают
+    -
+где используется capsys
+    -
+почему default_messages выносят в conftest.py
+    -
+
+расширить analyzer.py
+добавить функцию count_keywords()
+написать тест test_count_keywords()
+    -используем clean_messages
+    -протестировать подсчет слов urgent, Hello, random
+    -добавить проверку граничного случая (постой список)
+
+проверить переиспользование фикстур 
+    -добавить print в тело default_messages и clean_messages, показать количество вызовов каждой фикстуры
+    -(учитываем поведение scope='session' и scope='function')
+
+параметризированный тест
+
