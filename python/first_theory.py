@@ -1,5 +1,6 @@
 """
 cmd = terminal = терминал = консоль = power shell
+
 функции:
     print() - выводит на экран (консоль)
 
@@ -68,3 +69,38 @@ student = False
 print(name, age, student)
 print('строковый', 'целочисленный', 'булевый')
 print(type(name), type(age), type(student))
+
+# количество кликов: 24
+amount_clicks = 24
+print('количество кликов: ', amount_clicks)
+
+PI = 3.14
+DAYS_IN_WEEK = 7
+
+"""
+операции с типами данных:
+
++ - сложение
+- - вычитание
+* - умножение
+/ - деление
+% - остаток от деления
+
+сокращение кода:
++=
+-= 
+*= 
+/= 
+%=
+"""
+
+print(14 % 5)
+print(13 % 4)
+
+number = 5
+number = 10
+number = number + 1
+amount_clicks = amount_clicks + 1
+
+number += 1 # сокращение кода, то же самое что и number = number + 1
+print(number)
