@@ -10,3 +10,4 @@ age = input()
 age = int(age)
 print('через год вам будет:', age + 1, 'лет')
 
+print(age >= 18)
