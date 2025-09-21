@@ -16,6 +16,36 @@ orders = [
     ['order 6', 30, 'в пути'],
 ]
 
+dict_orders = {
+    "order 1": {
+        "amount": 18,
+        "status": "доставлен"
+    },
+    "order 2": {
+        "amount": 20,
+        "status": "доставлен"
+    },
+    "order 3": {
+        "amount": 15,
+        "status": "отменен"
+    },
+    "order 4": {
+        "amount": 10,
+        "status": "доставлен"
+    },
+    "order 5": {
+        "amount": 25,
+        "status": "отменен"
+    },
+    "order 6": {
+        "amount": 30,
+        "status": "в пути"
+    }
+}
+"""
+переделать решение с использованием словаря
+"""
+
 delivered_amount = 0
 order_names = []
 
@@ -27,3 +57,5 @@ for order in orders:
         
 print(delivered_amount)
 print(order_names)
+
+print(dict_orders["order 1"])
