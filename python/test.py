@@ -58,4 +58,14 @@ for order in orders:
 print(delivered_amount)
 print(order_names)
 
-print(dict_orders["order 1"])
+#print(dict_orders["order 1"])
+
+print(sum(1 if order["status"] == "доставлен" else 0 for order in dict_orders.values()))
+print(list(dict_orders.keys()))
+
+delivered_amount = 0
+for order in dict_orders.values():
+    if order["status"] == "доставлен":
+        delivered_amount += 1
+
+print(delivered_amount)
