@@ -23,11 +23,24 @@ MRO - порядок поиска методов в иерархии насле�
 декораторы - через @
 миксины - классы с доп функционалом, не предназначены для самостоятельного использования
 """
+class Angry:
+    def angry(self):
+        print('я злой')
 
-class Student:
+class Good:
+    def good(self):
+        print('я добрый')
+        
+class Human(Angry):
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+class Student(Human):
     is_student = True
 
-    def __init__(self, group_number, course):
+    def __init__(self, name, age, group_number, course):
+        super().__init__(name, age)
         self.group_number = group_number
         self.course = course
 
@@ -37,22 +50,20 @@ class Student:
     def checkout():
         print('checkout')
 
+class GoodStudent(Student, Good):
+    def __init__(self, name, age, group_number, course):
+        super().__init__(name, age, group_number, course)
+
+    def angry(self):
+        print("я не злой")
     
-print(type("123456789"))
-print(len("123456789"))
+Some_student = Student('name', 18, 'P3212', 2)
+print(Some_student.name, Some_student.age, Some_student.group_number, Some_student.course)
+Some_student.angry()
 
-Matvey = Student('P3212', 2)
-print(Matvey.group_number, Matvey.course)
-
-Matvey.course = 3
-print(Matvey.group_number, Matvey.course)
-
-John = Student('P3212', 2)
-
-Student.checkout()
-print(Student.is_student)
-Matvey.say_hello()
-
+Good_student = GoodStudent('name', 18, 'P3212', 2)
+Good_student.good()
+Good_student.angry()
 
 class Person:
 
@@ -103,3 +114,32 @@ class Phone:
 
     def call(self):
         print('call')
+
+
+class Animal:
+    def __init__(self, name, height, weight):
+        self.name = name
+        self.height = height
+        self.weight = weight
+
+    def make_voice(self):
+        print(f'{self.name} maked voice')
+
+class Cat(Animal):
+    def __init__(self, name, height, weight, color):
+        super().__init__(name, height, weight)
+        self.color = color
+
+    def greet(self):
+        super().make_voice()
+
+cat = Animal('вася', 12, 12)
+
+Cat = Cat('вася', 12, 12, 'black')
+Cat.make_voice()
+Cat.greet()
+
+# MClass от него унаследовать в тригонометрию
+# в триг мат функции
+# иниц предыдущее и 1 новое
+# из триг вызвать методы MClass
