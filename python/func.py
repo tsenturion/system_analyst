@@ -26,13 +26,13 @@ def название функции(аргументы):
 def add(a, b):
     print(a + b)
 
-add(3, 3)
-print(3 + 3)
+# add(3, 3)
+# print(3 + 3)
 
-print()
+# print()
 
-print(sum([1, 2, 3, 4, 5]))
-print(1)
+# print(sum([1, 2, 3, 4, 5]))
+# print(1)
 #number = int(input("Введите число: "))
 
 
@@ -41,7 +41,7 @@ def do_something():
     print()
 
 
-do_something()
+# do_something()
 
 def add(a, b):
     """
@@ -59,7 +59,7 @@ def add(a, b):
     """
     return a + b
 
-print(add(3, 3))
+# print(add(3, 3))
 
 
 
@@ -81,8 +81,8 @@ def print_even(n):
             else:
                 print(i)
 
-n = int(input("Введите число: "))
-print_even(n)
+# n = int(input("Введите число: "))
+# print_even(n)
 
 """
 создайте функцию, которая принимает на вход 2 аргумента
@@ -93,3 +93,15 @@ print_even(n)
 для первого аргумента:
     если тип данных - int, то вывести все числа от 0 до аргумента
 """
+
+def sum_int(a, b):
+    if type(a) == int and type(b) == int:
+        print(sum([a, b]))
+    else:
+        print(type(a), type(b))
+
+    if type(a) == int:
+        for i in range(a):
+            print(i)
+
+sum_int("10", "2")
