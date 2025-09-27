@@ -93,3 +93,13 @@ Matvey.to_learn()
 - поля: марка, модель, цвет, цена
 - методы: звонить
 """
+
+class Phone:
+    def __init__(self, brand, model, color, price):
+        self.brand = brand
+        self.model = model
+        self.color = color
+        self.price = price
+
+    def call(self):
+        print('call')
