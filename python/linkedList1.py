@@ -106,7 +106,7 @@ class LinkedList:
             raise IndexError("Index out of range")
 
     def __str__(self):
-        return " <-> ".join(str(item) for item in self) + " -> None"
+        return "None <- " + " <-> ".join(str(item) for item in self) + " -> None"
 
     def __len__(self):
         return sum(1 for _ in self)
@@ -273,14 +273,14 @@ class LinkedList:
 
         return None
 
-ll1 = LinkedList()
-ll1.add_to_tail(30)
-ll1.add_to_tail(20)
-ll1.add_to_tail(10)
-ll1.merge_sort()
-print(ll1)
+# ll1 = LinkedList()
+# ll1.add_to_tail(30)
+# ll1.add_to_tail(20)
+# ll1.add_to_tail(10)
+# ll1.merge_sort()
+# print(ll1)
 
-"""ll1 = LinkedList()
+ll1 = LinkedList()
 ll1.add_to_tail(10)
 ll1.add_to_tail(20)
 ll1.add_to_tail(30)
@@ -307,4 +307,4 @@ print("Список 1 пуст?", not ll1)
 
 ll1.clear()
 print("Список 1 после очистки:", ll1)
-print("Список 1 пуст?", not ll1)"""
+print("Список 1 пуст?", not ll1)
