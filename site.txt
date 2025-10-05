@@ -10,3 +10,4 @@ https://gigacode.ru/
 
 https://github.com/tsenturion/system_analyst
 https://mermaid.live/edit
+https://www.kaggle.com/datasets
