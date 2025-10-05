@@ -1,52 +1,66 @@
 import pandas as pd
 import openpyxl
 
-# Загружаем CSV
-# df = pd.read_csv('sales.csv')
 
-# print(df)
+df = pd.read_csv('sales.csv') #Загружаем CSV
 
-# df.to_csv('sales_new.csv', index=False)
+print(df)
 
-# df = pd.read_excel('sales.xlsx')
+df.to_csv('sales_new.csv', index=False)
 
-# print(df)
+df = pd.read_excel('sales.xlsx')
 
-# df.to_excel('sales_new.xlsx', index=False)
+print(df)
 
-# import json
+df.to_excel('sales_new.xlsx', index=False)
 
-# with open('data.json', 'r', encoding='utf-8') as file:
-#     data = json.load(file)
+import json
 
-# print(data)
+with open('data.json', 'r', encoding='utf-8') as file:
+    data = json.load(file)
 
-# with open('data_new.json', 'w', encoding='utf-8') as file:
-#     json.dump(data, file, ensure_ascii=False, indent=4)
+print(data)
 
-# import xml.etree.ElementTree as ET
+with open('data_new.json', 'w', encoding='utf-8') as file:
+    json.dump(data, file, ensure_ascii=False, indent=4)
 
-# tree = ET.parse('sales.xml')
-# root = tree.getroot()
+import xml.etree.ElementTree as ET
 
-# for month in root:
-#     print(month.attrib, month.text)
+tree = ET.parse('sales.xml')
+root = tree.getroot()
 
-# root = ET.Element('Продажи')
+for month in root:
+    print(month.attrib, month.text)
 
-# month1 = ET.SubElement(root, 'Месяц', name='Январь', категория='Электроника')
-# month1.text = '1200'
+root = ET.Element('Продажи')
 
-# tree = ET.ElementTree(root)
-# tree.write('sales_new.xml', encoding='utf-8', xml_declaration=True)
+month1 = ET.SubElement(root, 'Месяц', name='Январь', категория='Электроника')
+month1.text = '1200'
+
+tree = ET.ElementTree(root)
+tree.write('sales_new.xml', encoding='utf-8', xml_declaration=True)
 
 
-# with open('Sistemnyi_analitik.pdf', 'rb') as file:
-#     content = file.read()
-#     print(f'Длина файла: {len(content)} байт')
+with open('Sistemnyi_analitik.pdf', 'rb') as file:
+    content = file.read()
+    print(f'Длина файла: {len(content)} байт')
 
-# with open('copy.pdf', 'wb') as file:
-#     file.write(content)
+with open('copy.pdf', 'wb') as file:
+    file.write(content)
 
 df = pd.read_csv('sales.csv')
 df.to_excel('sales.xlsx', index=False)
+
+tables = pd.read_html('table.html')
+df = tables[0]  # берем первую таблицу на странице
+print(df)
+
+import zipfile
+import pandas as pd
+
+with zipfile.ZipFile('data.zip', 'r') as z:
+    with z.open('sales.csv') as file:
+        df = pd.read_csv(file)
+        print(df)
+
+import logging

@@ -10,6 +10,7 @@ shd101wyy.markdown-preview-enhanced
 mechatroner.rainbow-csv
 tomoki1207.pdf
 GrapeCity.gc-excelviewer
+techer.open-in-browser
 https://gigacode.ru/
 
 https://mermaid.live/edit
