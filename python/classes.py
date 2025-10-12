@@ -143,3 +143,11 @@ Cat.greet()
 # в триг мат функции
 # иниц предыдущее и 1 новое
 # из триг вызвать методы MClass
+
+
+class Calculator:
+    def add(self, a, b):
+        return a + b
+
+calc = Calculator()
+print(calc.add(2, 3))
