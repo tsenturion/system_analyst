@@ -52,7 +52,7 @@ while data != '0':
 while data := input() != '0':
     try:
         data = int(data)
-    except ValueError:
+    except Exception:
         print('вы ввели не число')
         break
 
@@ -66,3 +66,9 @@ while data := input() != '0':
     else:
         print('вы ввели не число')
         break
+
+
+try:
+    x = int("abc")  # Ошибка преобразования
+except ValueError as e:
+    print("Тест упал с ошибкой:", e)

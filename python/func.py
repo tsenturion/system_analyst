@@ -105,3 +105,11 @@ def sum_int(a, b):
             print(i)
 
 sum_int("10", "2")
+
+
+def add_numbers(a, b):
+    # Складываем два числа
+    return a + b
+
+result = add_numbers(2, 3)
+print(result)  # Ожидаем 5

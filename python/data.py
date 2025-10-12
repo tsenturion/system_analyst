@@ -64,3 +64,8 @@ with zipfile.ZipFile('data.zip', 'r') as z:
         print(df)
 
 import logging
+
+
+with open("data.txt", "r") as file:
+    content = file.read()
+    print(content)

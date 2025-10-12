@@ -15,3 +15,6 @@ import pandas as pd
 print(rint(1, 5))
 
 print(pi)
+
+import math
+print(math.sqrt(16))

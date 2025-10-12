@@ -104,3 +104,10 @@ amount_clicks = amount_clicks + 1
 
 number += 1 # сокращение кода, то же самое что и number = number + 1
 print(number)
+
+
+data = {"status": "ok", "code": 200, "result": [1, 2, 3]}
+
+# Проверяем, что код ответа 200
+if data["code"] == 200:
+    print("Тест пройден")

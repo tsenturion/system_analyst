@@ -1,11 +1,11 @@
-# что делает этот код?
-from itertools import permutations
+import requests
 
-data = input()
+response = requests.get("https://api.github.com")
+data = response.json()
 
-numbers = data.split(",")
+print(data["current_user_url"])
 
-unique_perms = set(permutations(numbers))
-
-for perm in unique_perms:
-    print("".join(perm))
+if response.status_code == 200:
+    print("Тест успешен")
+else:
+    print("Ошибка:", response.status_code)
